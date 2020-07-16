@@ -3,8 +3,8 @@ import discord
 from discord.ext import tasks
 from datetime import datetime 
 
-TOKEN = "NzMzNDUwMjIzNzA3NDg4MjU3.XxDVig.qxhGwS_LbcsgBx6y5kpnc2h1W1Q" #トークン
-CHANNEL_ID = ********** #チャンネルID
+TOKEN = os.environ['DISCORD_BOT_TOKEN']#トークン
+CHANNEL_ID = 687937024581173251 #チャンネルID
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
@@ -12,10 +12,26 @@ client = discord.Client()
 @tasks.loop(seconds=60)
 async def loop():
     # 現在の時刻
-    now = datetime.now().strftime('%H:%M')
-    if now == '07:00':
+    now = datetime.now().strftime('%H:%M:%A')
+    if now == '07:00:Wednesday':
         channel = client.get_channel(CHANNEL_ID)
-        await channel.send('おはよう')  
+        await channel.send('
+キ
+  ン
+    タ
+     マ
+       キ
+        ラ
+         キ
+          ラ
+          金
+       曜日
+ 
+   
+           
+
+
+')  
 
 #ループ処理実行
 loop.start()
